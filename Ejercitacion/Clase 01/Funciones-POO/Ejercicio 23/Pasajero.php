@@ -31,6 +31,9 @@ Crear el método de clase “Remove”, que permite quitar un pasajero de un vue
      public function equals($pasajero1, $pasajero2 ) {
         return $pasajero1->_dni == $pasajero2->_dni;
      }
+     public function getEsPlus() {
+        return $this->_esPlus;
+     }
      public function getInfoPasajero() {
         return "Pasajero:<br>Apellido y nombre: $this->_apellido, $this->_nombre.<br>"
         ."DNI: $this_dni.<br>Plus: ".($this->_esPlus)? "Si" : "No".".<br>";
