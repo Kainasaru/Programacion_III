@@ -1,0 +1,32 @@
+<!--Aplicación Nº 26 (Copiar archivos)
+Generar una aplicación que sea capaz de copiar un archivo de texto 
+(su ubicación se ingresará por la página) hacia otro archivo que será creado y 
+alojado en ./misArchivos/yyyy_mm_dd_hh_ii_ss.txt, dónde yyyy corresponde al año en curso, mm al mes, 
+dd al día, hh hora, ii minutos y ss segundos.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web</title>
+</head>
+<body>
+    <form action="./copyFile.php" method="post">
+        <table>
+            <thead>
+                <th colspan="2">Subir archivo al servidor</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Escriba dirección de su archivo:</td>
+                    <td><input type="text" name="file" id="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Enviar" id="envBtn"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

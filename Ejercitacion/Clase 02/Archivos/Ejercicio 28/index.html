@@ -1,0 +1,61 @@
+<!--Aplicación Nº 28 (Encriptar / Desencriptar archivos)
+Crear una página web que permita encriptar mensajes y que se guarden en un archivo de texto y 
+que sólo si se lee el archivo desde la página se podrá acceder a su texto claro, es decir se desencriptará.
+Crear la clase Enigma, la cual tendrá la funcionalidad de encriptar/desencriptar los mensajes.
+Su método estático Encriptar, recibirá un mensaje y a cada número del código ASCII de cada carácter 
+del string le sumará 200. Una vez que cambie todos los caracteres, lo guardará en un archivo de texto
+ (el path también se recibirá por parámetro). Retornará TRUE si pudo guardar correctamente el archivo 
+ encriptado, FALSE, caso contrario.
+El método estático Desencriptar, recibirá sólo el path de dónde se leerá el archivo. Realizar el proceso
+ inverso para restarle a cada número del código ASCII de cada carácter leído 200, para poder retornar el 
+ mensaje y ser mostrado desesncriptado.-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encriptación online</title>
+</head>
+
+<body>
+    <form action="./Action.php" method="POST">
+        <table>
+            <thead>
+                <th colspan="2">Encriptar</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Escriba mensaje a encriptar:</td>
+                    <td><input type="text" name="msg" id="msg"></td>
+                </tr>
+                <tr>
+                    <td>Escriba ruta del archivo:</td>
+                    <td><input type="text" name="file" id="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Enviar" id="envBtn"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <form action="Action.php" method="POST">
+        <table>
+            <thead>
+                <th colspan="2">Desencriptar</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ruta del archivo encriptado:</td>
+                    <td><input type="text" name="file2" id="file2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Enviar" id="envBtn2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
