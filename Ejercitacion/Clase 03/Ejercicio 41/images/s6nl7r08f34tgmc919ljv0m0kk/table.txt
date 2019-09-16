@@ -1,0 +1,39 @@
+<td><a href="./original.html"><img src="./images/foto1.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a> </td>
+        <td>Bosque mágico</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto2.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Cataratas</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto3.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Playa montañosa</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto4.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Cascadas</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto5.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Pradera</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto6.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Pradera otoñal</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto7.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Río y cascadas</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto8.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Playa mágica</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto9.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Perú</td>
+        </tr>
+        <tr>
+        <td><a href="./original.html"><img src="./images/foto10.jpg" width="100px" height="100px" onclick="saveSelectedImg(this)"></a></td>
+        <td>Bosque de otoño</td>
+        </tr><tr><td><a href='original.html'><img src='./images/s6nl7r08f34tgmc919ljv0m0kk/foto11.jpg' width='100px' height='100px' onclick='saveSelectedImg(this)' ></a></td><td>mujer de papa</tr>
