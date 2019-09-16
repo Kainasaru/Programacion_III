@@ -33,8 +33,5 @@ require ".\Clases\Archivo.php";
             break;
         
         default:
-
             break;
     }
-
-?>

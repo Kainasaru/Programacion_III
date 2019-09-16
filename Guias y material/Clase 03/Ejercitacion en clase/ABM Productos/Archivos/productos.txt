@@ -2,3 +2,6 @@
 124 - Batata - ./Archivos/images/Lighthouse.jpg
 125 - Pan - ./Archivos/images/Koala.jpg
 126 - Manazana - ./Archivos/images/Chrysanthemum.jpg
+20 - tomate - ./Archivos/images/dni1.jpg
+21 - yerba - ./Archivos/images/dni1.jpg
+111 - fideos - ./Archivos/images/informe diagnóstico.jpeg
