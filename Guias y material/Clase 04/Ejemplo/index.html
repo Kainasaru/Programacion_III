@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Ejemplos MYSQLI - PHP</title>
+	  
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="./img/utnLogo.png" rel="icon" type="image/png" />
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/animacion.css">		
+		
+		<!-- Estilos propios -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+		<script type="text/javascript" src="JavaScript/ajax.js"></script>
+		<script type="text/javascript" src="JavaScript/app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>MYSQLI - PHP</h1>      
+		</div>
+		<div class="CajaInicio animated bounceInLeft">
+			<h1>MYSQLI</h1>
+			<a href="#" class="list-group-item list-group-item list-group-item-info">
+				<h4 class="list-group-item-heading">Establecer conexión</h4>
+				<p class="list-group-item-text" onclick="Main.EstablecerConexion()">Establecer Conexión</p>
+			</a>
+			<a href="#" class="list-group-item list-group-item list-group-item-info">
+				<h4 class="list-group-item-heading">Ejecutar Consulta</h4>
+				<p class="list-group-item-text" onclick="Main.EjecutarConsulta()">Ejecutar Select</p>
+				<p class="list-group-item-text" onclick="Main.MostrarConsulta()">Mostrar Consulta Select</p>
+			</a>
+			<a href="#" class="list-group-item list-group-item list-group-item-info">
+					<h4 class="list-group-item-heading">Ejecutar Consulta II</h4>
+					<p class="list-group-item-text" onclick="Main.EjecutarInsert()">Ejecutar Insert</p>
+					<p class="list-group-item-text" onclick="Main.EjecutarUpdate()">Ejecutar Update</p>
+					<p class="list-group-item-text" onclick="Main.EjecutarDelete()">Ejecutar Delete</p>
+				</a>
+			</div>		
+		<div id="divResulado" class="CajaInicio animated bounceInRight">
+		</div>
+	</div>
+</body>
+</html>
