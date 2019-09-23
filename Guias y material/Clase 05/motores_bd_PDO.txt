@@ -1,0 +1,15 @@
+(*) Bases de datos 
+DBLIB: FreeTDS / Microsoft SQL Server / Sybase; 
+Firebird (http://firebird.sourceforge.net/): Firebird/Interbase 6; 
+IBM (IBM DB2); 
+INFORMIX - IBM Informix Dynamic Server; 
+MYSQL (http://www.mysql.com/): MySQL 3.x/4.0; 
+OCI (http://www.oracle.com): Oracle Call Interface; 
+ODBC: ODBC v3 (IBM DB2 and unixODBC); 
+PGSQL (http://www.postgresql.org/): PostgreSQL; 
+SQLITE (http://sqlite.org/): SQLite 3.x
+
+
+
+
+mysql:host=localhost;dbname=cdcol;charset=utf8
