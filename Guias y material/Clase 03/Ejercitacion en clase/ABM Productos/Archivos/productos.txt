@@ -16,3 +16,4 @@
 4445 - batatas - ./Archivos/images/img3.jpg
 12388 - Cacao - ./Archivos/images/img5.jpg
 4789 - durazno - ./Archivos/images/img4.jpg
+444456 - Galletita - ./Archivos/images/img3.jpg

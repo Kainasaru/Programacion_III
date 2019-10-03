@@ -29,8 +29,4 @@ switch ($option) {
         echo "<a href='./index.php'><h1>Volver</h1></a>";
         echo $tabla;
         break;
-
-    default:
-        $tabla = "";
-        break;
 }

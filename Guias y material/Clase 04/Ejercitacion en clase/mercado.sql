@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2019 a las 17:00:42
+-- Tiempo de generación: 03-10-2019 a las 17:58:25
 -- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Versión de PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,7 +42,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `codigo_barra`, `nombre`, `path_foto`) VALUES
-(3, '00010001', 'Mani', 'fotopath.jpg');
+(4, '123456', 'tomate', '/Ejercitacion/Ejercitacion%20en%20clase/fotos/'),
+(5, '123456', 'tomate', '/Ejercitacion/Ejercitacion%20en%20clase/fotos/img1'),
+(6, '42', 'cereal', './fotos/img1.jpg\n'),
+(7, '42', 'cereal', './fotos/img2.jpg\n');
 
 -- --------------------------------------------------------
 
@@ -65,7 +68,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `clave`, `perfil`, `estado`) VALUES
 (2, 'Alice', 'Wonderland', '12345', 2, 1),
-(4, 'Jhin', 'Khada', '4444', 1, 1);
+(4, 'Jhin', 'Khada', '4444', 1, 1),
+(5, 'Leonardo', 'Ariman', '123456789', 6, 1);
 
 --
 -- Índices para tablas volcadas
@@ -91,13 +95,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
