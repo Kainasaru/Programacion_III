@@ -12,7 +12,7 @@
 <body>
 	<a class="btn btn-info" href="index.html">Menu principal</a>
 <?php     
-	require_once("clases\producto.php");
+	require_once("clases/producto.php");
 ?>
 	<div class="container">
 	

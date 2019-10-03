@@ -2,6 +2,17 @@
 124 - Batata - ./Archivos/images/Lighthouse.jpg
 125 - Pan - ./Archivos/images/Koala.jpg
 126 - Manazana - ./Archivos/images/Chrysanthemum.jpg
-20 - tomate - ./Archivos/images/dni1.jpg
-21 - yerba - ./Archivos/images/dni1.jpg
-111 - fideos - ./Archivos/images/informe diagnóstico.jpeg
+78910 - Zapallo - ./Archivos/images/img5.jpg
+1111 - Arroz - ./Archivos/images/img1.jpg
+456789 - zanahorias - ./Archivos/images/img2.jpg
+456789 - zanahorias - ./Archivos/images/img2.jpg
+456789 - zanahorias - ./Archivos/images/img2.jpg
+456789 - zanahorias - ./Archivos/images/img2.jpg
+ -  - ./Archivos/images/img2.jpg
+8888 - Fideos - ./Archivos/images/img4.jpg
+8888 - Fideos - ./Archivos/images/img4.jpg
+444 - fly - ./Archivos/images/img4.jpg
+444 - fly - ./Archivos/images/img4.jpg
+4445 - batatas - ./Archivos/images/img3.jpg
+12388 - Cacao - ./Archivos/images/img5.jpg
+4789 - durazno - ./Archivos/images/img4.jpg
