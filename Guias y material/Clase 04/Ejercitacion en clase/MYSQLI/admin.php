@@ -70,7 +70,7 @@ if( $connection ) {
         case "Agregar_usuarios":
         $query = "INSERT INTO `usuarios`(`nombre`, `apellido`, `clave`, `perfil`, `estado`) VALUES ('$nombre','$apellido','$clave',$perfil,$estado)";
         $rs = $connection->query($query);
-        if($rs !== false)  {
+        if($rs === true)  {
             echo "<font color='green'>Usuario agregado con éxito.</font>";
         }
         else {
@@ -80,7 +80,7 @@ if( $connection ) {
         case "Modificar_usuarios":
         $query = "UPDATE `usuarios` SET `nombre`='$nombre', `apellido`='$apellido',`clave`='$clave',`perfil`=$perfil,`estado`=$estado WHERE id=$id";
         $rs = $connection->query($query);
-        if($rs !== false )  {
+        if(mysqli_affected_rows($connection) > 0)  {
             echo "<font color='green'>Usuario modificado con éxito.</font>";
         }
         else {
@@ -90,7 +90,7 @@ if( $connection ) {
         case "Borrar_usuarios":
         $query = "DELETE FROM `usuarios` WHERE id = $id";
         $rs = $connection->query($query);
-        if($rs !== false)  {
+        if(mysqli_affected_rows($connection) > 0)  {
             echo "<font color='green'>Usuario borrado con éxito.</font>";
         }
         else {

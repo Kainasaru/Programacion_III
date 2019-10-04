@@ -80,7 +80,7 @@ if( $connection ) {
         case "Agregar_productos":
         $query = "INSERT INTO `productos`(`codigo_barra`, `nombre`, `path_foto`) VALUES ('$codigoDeBarra','$nombre','$pathFoto')";
         $rs = $connection->query($query);
-        if($rs !== false)  {
+        if($rs === true)  {
             echo "<font color='green'>Producto agregado con éxito.</font>";
         }
         else {
@@ -90,7 +90,7 @@ if( $connection ) {
         case "Modificar_productos":
         $query = "UPDATE `productos` SET `codigo_barra`='$codigoDeBarra', `nombre`='$nombre',`path_foto`='$pathFoto' WHERE id=$id";
         $rs = $connection->query($query);
-        if($rs !== false)  {
+        if(mysqli_affected_rows($connection) > 0)  {
             echo "<font color='green'>Producto modificado con éxito.</font>";
         }
         else {
@@ -100,7 +100,7 @@ if( $connection ) {
         case "Borrar_productos":
         $query = "DELETE FROM `productos` WHERE id = $id";
         $rs = $connection->query($query);
-        if($rs !== false)  {
+        if(mysqli_affected_rows($connection) > 0)  {
             echo "<font color='green'>Producto borrado con éxito.</font>";
         }
         else {
