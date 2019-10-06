@@ -84,7 +84,6 @@ switch ($queMuestro) {
             $sql = $db->query('SELECT titel AS titulo, interpret AS interprete, jahr AS anio FROM cds');
 
             $catidadFilas = $sql->rowCount();
-
             $obj->Html = "Cantidad de filas: " . $catidadFilas . "---";
 
             $resultado = $sql->fetchall();

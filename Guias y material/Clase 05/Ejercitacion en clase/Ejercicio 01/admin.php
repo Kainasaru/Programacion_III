@@ -3,20 +3,21 @@ $conStr = "mysql:host=localhost;dbname=cdcol;charset=utf8";
 $user = "root";
 $pass = "";
 $exito = true;
-//$tabla = "<table><thead><"
 try {
     $db = new PDO($conStr,$user,$pass);
     $sql = 'SELECT * FROM `cds`';
     $result = $db->query($sql);
     $filas = $result->fetchAll(PDO::FETCH_NUM);
-    $tabla = "<table><thead><th>titulo</th><th>";
+    $tabla = "<table border='1'><thead><tr><th>Título</th><th>Intérprete</th><th>Año</th><th>Id</th></tr></thead><tbody>";
     foreach( $filas as $fila) {
+        $tabla .= "<tr>";
         foreach( $fila as $value) {
-            $print .= $value." ";
+            $tabla .= "<td>$value</td>";
         }
-        $print .= "<br/>";
+        $tabla .= "</tr>";
     }
-    echo $print;
+    $tabla .= "</tbody></table>";
+    echo $tabla;
 }
 catch( PDOException $e) {
     $exito = false;

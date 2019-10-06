@@ -26,47 +26,48 @@ switch ($op) {
  
     case 'mostrarTodos':
 
-        $usuarios = usuario::TraerTodosLosUsuarios();
+        $cds = cd::TraerTodosLosCd();
         
-        foreach ($usuarios as $usuario) {
+        foreach ($cds as $cd) {
             
-            print_r($usuario->MostrarDatos());
-            print("");
+            print_r($cd->MostrarDatos());
+            print("
+                    ");
         }
     
         break;
 
-    case 'insertarUsuario':
+    case 'insertarCd':
     
-        $miUsuario = new usuario();
-        $miUsuario->id = 66;
-        $miUsuario->titulo = "Un titulo";
-        $miUsuario->anio = 2018;
-        $miUsuario->interprete = "Un cantante";
+        $miCD = new cd();
+        $miCD->id = 66;
+        $miCD->titulo = "Un titulo";
+        $miCD->anio = 2018;
+        $miCD->interprete = "Un cantante";
         
-        $miUsuario->InsertarElUsuario();
+        $miCD->InsertarElCD();
 
         echo "ok";
         
         break;
 
-    case 'modificarUsuario':
+    case 'modificarCd':
     
         $id = $_POST['id'];        
         $titulo = $_POST['titulo'];
         $anio = $_POST['anio'];
         $interprete = $_POST['interprete'];
     
-        echo usuario::ModificarUsuario($nombre, $apellido, $clave, $perfil,$estado,$correo);
+        echo cd::ModificarCD($id, $titulo, $anio, $interprete);
             
         break;
 
     case 'eliminarCd':
     
-        $miUsuario = new usuario();
-        $miUsuario->id = 66;
+        $miCD = new cd();
+        $miCD->id = 66;
         
-        $miUsuario->EliminarUsuario($miUsuario);
+        $miCD->EliminarCD($miCD);
 
         echo "ok";
         

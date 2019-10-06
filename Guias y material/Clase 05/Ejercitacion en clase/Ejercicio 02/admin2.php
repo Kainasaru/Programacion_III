@@ -11,15 +11,10 @@ $nombre = isset($_POST["nombre"])? $_POST["nombre"] : "";
 $pathFoto = isset($_POST["path_foto"])? $_POST["path_foto"] : "";
 /* Fin variables necesarias */
 try {
-    $db = new PDO($con,$user,$pass); //Conecto al servidor de base de datos
-}
-catch( PDOException $e) {
-    echo "Error al conectar a la base de datos.";
-}
-$query = ""; //Aqui guardare las consultas a realizar
-$tabla = "<table border='1'><thead><tr><th>Id</th><th>Código de barra</th><th>Nombre</th><th>Ruta de la foto</th><th>Foto</th></tr></thead><tbody>";
-if( $db ) {
+    $query = ""; //Aqui guardare las consultas a realizar
     $rs = null; //Recurso conteniendo la consulta realizada
+    $tabla = "<table border='1'><thead><tr><th>Id</th><th>Código de barra</th><th>Nombre</th><th>Ruta de la foto</th><th>Foto</th></tr></thead><tbody>";
+    $db = new PDO($con,$user,$pass); //Conecto al servidor de base de datos
     switch($option ) {
         case "TraerTodos_productos":
         $query = "SELECT * FROM `productos` ";
@@ -128,5 +123,8 @@ if( $db ) {
         }
         break;
     }
+}
+catch( PDOException $e) {
+    echo "Error al conectar a la base de datos.";
 }
 ?>

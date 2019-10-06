@@ -1,32 +1,30 @@
-<?php 
-require_once "AccesoDatos.php";
-require_once "Usuarios.php";
+<?php
 
-$op = isset($_POST['op']) ? $_POST['op'] : NULL;
+include_once ("AccesoDatos.php");
+include_once ("usuarios.php");
+
+$op = isset($_POST['option']) ? $_POST['option'] : NULL;
 
 switch ($op) {
     case 'accesoDatos':
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
         
-        $consulta = $objetoAccesoDato->RetornarConsulta("select titel AS titulo, interpret AS interprete, jahr AS anio "
-                                                        . "FROM cds");
+        $consulta = $objetoAccesoDato->RetornarConsulta("SELECT * from `usuarios`");
         $consulta->execute();
         
-        $consulta->setFetchMode(PDO::FETCH_INTO, new cd);
+        $consulta->setFetchMode(PDO::FETCH_INTO, new Usuario());
         
-        foreach ($consulta as $cd) {
+        foreach ($consulta as $usuario) {
         
-            print_r($cd->MostrarDatos());
-            print("
-                    ");
+            print_r($usuario->MostrarDatos());
+            print("<br/>");
         }
 
         break;
  
     case 'mostrarTodos':
 
-        $usuarios= usuario::TraerTodosLosUsuarios();
-        
+        $usuarios = Usuario::TraerTodosLosUsuarios();
         foreach ($usuarios as $usuario) {
             
             print_r($usuario->MostrarDatos());
@@ -35,46 +33,51 @@ switch ($op) {
     
         break;
 
-    case 'insertarCd':
+    case 'insertarUsuario':
     
-        $miCD = new cd();
-        $miCD->id = 66;
-        $miCD->titulo = "Un titulo";
-        $miCD->anio = 2018;
-        $miCD->interprete = "Un cantante";
+        $miUsuario = new Usuario();
+        $miUsuario->id = 66;
+        $miUsuario->nombre = "Anibal";
+        $miUsuario->apellido = "Ariman";
+        $miUsuario->clave = "1234";
+        $miUsuario->correo = "spore2@gmail.com";
+        $miUsuario->perfil = 22;
+        $miUsuario->estado = 1;
         
-        $miCD->InsertarElCD();
+        $miUsuario->InsertarElUsuario();
 
         echo "ok";
         
         break;
 
-    case 'modificarCd':
+    case 'modificarUsuario':
     
         $id = $_POST['id'];        
-        $titulo = $_POST['titulo'];
-        $anio = $_POST['anio'];
-        $interprete = $_POST['interprete'];
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $clave = $_POST['clave'];
+        $clave = $_POST['correo'];
+        $perfil = $_POST['perfil'];
+        $estado = $_POST['estado'];
     
-        echo cd::ModificarCD($id, $titulo, $anio, $interprete);
-            
+        echo Usuario::ModificarUsuario($id, $nombre, $apellido, $clave,$correo,$perfil,$estado);
         break;
 
-    case 'eliminarCd':
+    case 'eliminarUsuario':
     
-        $miCD = new cd();
-        $miCD->id = 66;
+        $miUsuario = new Usuario();
+        $miUsuario->id = 66;
         
-        $miCD->EliminarCD($miCD);
+        $miUsuario->eliminarUsuario($miUsuario);
 
         echo "ok";
         
         break;
-        
+    case "existeUsuario":
+        echo Usuario::existeEnBD($_POST["correo"],$_POST["clave"])? "Existe.":"No existe.";
+        break;
         
     default:
         echo ":(";
         break;
 }
-
-?>

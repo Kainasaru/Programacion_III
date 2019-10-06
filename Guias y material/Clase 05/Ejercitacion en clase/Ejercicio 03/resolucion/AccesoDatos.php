@@ -34,8 +34,6 @@ class AccesoDatos
  
         return self::$_objetoAccesoDatos;        
     }
-
-    
  
     // Evita que el objeto se pueda clonar
     public function __clone()
