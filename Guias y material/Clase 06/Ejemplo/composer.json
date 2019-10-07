@@ -1,0 +1,7 @@
+{
+    "name" : "utn_fra/prog_3",
+    "description": "generador de documentos .pdf",
+	"require":{
+		"mpdf/mpdf": "8.*"
+	}
+}
