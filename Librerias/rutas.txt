@@ -1,0 +1,2 @@
+/// <reference path="../Librerias/Jquery/node_modules/@types/jquery" />
+/// <reference path="../Librerias/all.d.ts" />
