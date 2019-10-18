@@ -1,0 +1,6 @@
+/// <reference path="../Librerias/Jquery/node_modules/@types/jquery/index.d.ts" />
+/// <reference path="../Librerias/all.d.ts" />
+require_once "../Librerias/json.php";
+require_once "../Librerias/archivo.php";
+
+LINK JQUERY: https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
